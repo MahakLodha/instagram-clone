@@ -129,7 +129,12 @@ posts.forEach((post) => {
     });
   }
 });
-
+// Adding buttons features on every post with multiple medias
+postsContent.forEach((post) => {
+  if (post.querySelectorAll('.post__media').length > 1) {
+    const leftButton = post.querySelector('.post__left-button');
+    const rightButton = post.querySelector('.post__right-button');
+    const postMediasContainer = post.querySelector('.post__medias');
 
 
     // Functions for left and right buttons
